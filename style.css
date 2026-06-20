@@ -1,0 +1,377 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#020617;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(2,6,23,0.85);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:40px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HOME PAGE */
+
+.hero{
+    height:100vh;
+    background:linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #1e3a8a
+    );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-content h1{
+    font-size:80px;
+    margin-bottom:30px;
+}
+
+.hero-content p{
+    font-size:24px;
+    color:#cbd5e1;
+    line-height:40px;
+    margin-bottom:50px;
+}
+
+.btn1,
+.btn2{
+    display:inline-block;
+    text-decoration:none;
+    padding:16px 35px;
+    border-radius:40px;
+    font-size:18px;
+    margin:10px;
+    transition:0.3s;
+}
+
+.btn1{
+    background:#38bdf8;
+    color:#020617;
+    font-weight:bold;
+}
+
+.btn2{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.btn1:hover,
+.btn2:hover{
+    transform:translateY(-6px);
+}
+
+/* CARS PAGE */
+
+.fleet{
+    min-height:100vh;
+    padding:140px 8% 80px;
+    background:#020617;
+}
+
+.fleet h1{
+    text-align:center;
+    font-size:60px;
+    margin-bottom:60px;
+}
+
+.fleet-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.car-card{
+    background:#1e293b;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.car-card:hover{
+    transform:translateY(-10px);
+}
+
+.car-card h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+    font-size:35px;
+}
+
+.car-card p{
+    color:#cbd5e1;
+    margin-bottom:25px;
+    font-size:20px;
+}
+
+.car-card a{
+    text-decoration:none;
+    background:#38bdf8;
+    color:#020617;
+    padding:14px 30px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* INDIVIDUAL CAR PAGES */
+
+.car-page{
+    width:70%;
+    margin:120px auto;
+    background:white;
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.car-page h1{
+    color:#1e3a8a;
+    font-size:55px;
+    margin-bottom:35px;
+}
+
+.car-page img{
+    width:55%;
+    max-width:600px;
+    border-radius:20px;
+}
+
+.car-page p{
+    margin-top:35px;
+    font-size:22px;
+    color:#333;
+    line-height:38px;
+}
+
+.book-btn{
+    display:inline-block;
+    margin-top:35px;
+    text-decoration:none;
+    background:#1e3a8a;
+    color:white;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:18px;
+}
+/* BOOKING PAGE */
+
+.booking{
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #1e3a8a
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px;
+}
+
+.booking-box{
+    width:100%;
+    max-width:550px;
+    background:#1e293b;
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.booking-box h1{
+    font-size:45px;
+    color:#38bdf8;
+    margin-bottom:35px;
+}
+
+.booking-box form{
+    display:flex;
+    flex-direction:column;
+}
+
+.booking-box input,
+.booking-box select{
+    margin:12px 0;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    font-size:17px;
+}
+
+.booking-box button{
+    margin-top:25px;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#38bdf8;
+    color:#020617;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.booking-box button:hover{
+    opacity:0.9;
+}
+/* ABOUT PAGE */
+
+.about{
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #1e3a8a
+    );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 8%;
+}
+
+.about-box{
+    max-width:1000px;
+    text-align:center;
+}
+
+.about-box h1{
+    font-size:65px;
+    color:#38bdf8;
+    margin-bottom:35px;
+}
+
+.about-box p{
+    font-size:22px;
+    color:#cbd5e1;
+    line-height:40px;
+    margin-bottom:60px;
+}
+
+.about-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.about-card{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.about-card:hover{
+    transform:translateY(-10px);
+}
+
+.about-card h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.about-card p{
+    font-size:18px;
+    color:#cbd5e1;
+    line-height:30px;
+    margin:0;
+}
+/* CONTACT PAGE */
+
+.contact{
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #1e3a8a
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:100px;
+}
+
+.contact-card{
+    width:500px;
+    background:#1e293b;
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+.contact-card h1{
+    color:#38bdf8;
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+.contact-item{
+    margin-bottom:35px;
+}
+
+.contact-item h2{
+    color:#38bdf8;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.contact-item p{
+    color:white;
+    font-size:22px;
+}
