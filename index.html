@@ -1,47 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valparai Car Rentals</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Car Service App</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .login-links {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .login-links a {
+      padding: 15px 25px;
+      background-color: #fff;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .login-links a:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-    <div class="logo">Valparai Car Rentals</div>
+<header>
+  <h1>Welcome to My Car Service App</h1>
+  <p>Select your login to continue</p>
+</header>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cars.html">Cars</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<div class="login-links">
+  <a href="admin_login.html">Admin Login</a>
+  <a href="customer_login.html">Customer Login</a>
+  <a href="mechanic_login.html">Mechanic Login</a>
+</div>
 
-<section class="hero">
-
-    <div class="hero-content">
-
-        <h1>Valparai Car Rentals</h1>
-
-        <p>
-            Discover comfortable, reliable and affordable rental cars
-            for your family trips, vacations and adventures in Valparai.
-        </p>
-
-        <a href="cars.html" class="btn1">
-            Explore Cars
-        </a>
-
-        <a href="booking.html" class="btn2">
-            Book Now
-        </a>
-
-    </div>
-
-</section>
+<footer>
+  &copy; 2024 My Car Service App. All rights reserved.
+</footer>
 
 </body>
 </html>
