@@ -4,87 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Valparai Car Rentals</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      min-height: 100vh;
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: rgba(0,0,0,0.2);
-      width: 100%;
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-    }
-
-    .cta {
-      margin-top: 30px;
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .cta a {
-      padding: 20px 40px;
-      background-color: #fff;
-      color: #333;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .cta a:hover {
-      background-color: #f0f0f0;
-      transform: scale(1.05);
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      font-size: 0.9em;
-      background-color: rgba(0,0,0,0.1);
-      width: 100%;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
+    <div class="logo">Valparai Rentals</div>
+    <nav>
+      <ul>
+        <li><a href="#">Become a Host</a></li>
+        <li><a href="#">Company Profile</a></li>
+        <li><a href="#">Get the App</a></li>
+        <li><a href="#" class="login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>Valparai Car Rentals</h1>
-  <p>Your Trusted Car Rental Service in Valparai</p>
-</header>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Book Self-Drive Car Rentals in Valparai</h1>
+      <div class="search-box">
+        <form>
+          <label for="city">City</label>
+          <select id="city" required>
+            <option value="Valparai">Valparai</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Chennai">Chennai</option>
+          </select>
 
-<div class="cta">
-  <a href="admin_login.html">Admin Login</a>
-  <a href="customer_login.html">Customer Login</a>
-  <a href="mechanic_login.html">Mechanic Login</a>
-</div>
+          <label for="location">Location</label>
+          <input type="text" id="location" placeholder="Enter specific location or landmark" />
 
-<footer>
-  &copy; 2024 Valparai Car Rentals. All rights reserved.
-</footer>
+          <label for="start-date">Trip Start</label>
+          <input type="date" id="start-date" />
 
+          <label for="end-date">Trip End</label>
+          <input type="date" id="end-date" />
+
+          <div class="checkbox">
+            <input type="checkbox" id="delivery" />
+            <label for="delivery">Delivery & Pickup from anywhere</label>
+          </div>
+
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Explore Valparai with Our Car Rentals</h2>
+    <p>Discover the scenic beauty of Valparai with our easy and affordable car rental services. Whether you're visiting the tea estates, waterfalls, or wildlife sanctuaries, we've got the perfect vehicle for your trip.</p>
+  </section>
+
+  <footer>
+    <p>Contact us: info@valparairentals.com | +91 12345 67890</p>
+    <p>&copy; 2024 Valparai Rentals. All rights reserved.</p>
+  </footer>
 </body>
 </html>
