@@ -4,62 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Valparai Car Rentals</title>
+  <!-- Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header with logo and navigation -->
   <header>
-    <div class="logo">Valparai Rentals</div>
-    <nav>
-      <ul>
-        <li><a href="#">Become a Host</a></li>
-        <li><a href="#">Company Profile</a></li>
-        <li><a href="#">Get the App</a></li>
-        <li><a href="#" class="login-btn">Login</a></li>
-      </ul>
-    </nav>
+    <div class="container header-container">
+      <div class="logo">Valparai Rentals</div>
+      <nav>
+        <ul>
+          <li><a href="#">Become a Host</a></li>
+          <li><a href="#">Company Profile</a></li>
+          <li><a href="#">Get the App</a></li>
+          <li><a href="#" class="btn-login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Hero Section with background image -->
   <section class="hero">
     <div class="overlay"></div>
-    <div class="hero-content">
+    <div class="hero-content container">
       <h1>Book Self-Drive Car Rentals in Valparai</h1>
+      <p>Discover scenic valleys and waterfalls with our reliable car rental services.</p>
+      <!-- Search Form -->
       <div class="search-box">
         <form>
-          <label for="city">City</label>
-          <select id="city" required>
-            <option value="Valparai">Valparai</option>
-            <option value="Coimbatore">Coimbatore</option>
-            <option value="Chennai">Chennai</option>
-          </select>
-
-          <label for="location">Location</label>
-          <input type="text" id="location" placeholder="Enter specific location or landmark" />
-
-          <label for="start-date">Trip Start</label>
-          <input type="date" id="start-date" />
-
-          <label for="end-date">Trip End</label>
-          <input type="date" id="end-date" />
-
-          <div class="checkbox">
+          <div class="form-group">
+            <label for="city">City</label>
+            <select id="city" required>
+              <option value="Valparai">Valparai</option>
+              <option value="Coimbatore">Coimbatore</option>
+              <option value="Chennai">Chennai</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Enter specific location or landmark" />
+          </div>
+          <div class="form-group">
+            <label for="start-date">Trip Start</label>
+            <input type="date" id="start-date" />
+          </div>
+          <div class="form-group">
+            <label for="end-date">Trip End</label>
+            <input type="date" id="end-date" />
+          </div>
+          <div class="form-group checkbox-group">
             <input type="checkbox" id="delivery" />
             <label for="delivery">Delivery & Pickup from anywhere</label>
           </div>
-
-          <button type="submit">Search</button>
+          <button type="submit" class="btn-primary">Search</button>
         </form>
       </div>
     </div>
   </section>
 
-  <section class="content">
+  <!-- Content Section -->
+  <section class="content container">
     <h2>Explore Valparai with Our Car Rentals</h2>
     <p>Discover the scenic beauty of Valparai with our easy and affordable car rental services. Whether you're visiting the tea estates, waterfalls, or wildlife sanctuaries, we've got the perfect vehicle for your trip.</p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>Contact us: info@valparairentals.com | +91 12345 67890</p>
-    <p>&copy; 2024 Valparai Rentals. All rights reserved.</p>
+    <div class="container footer-content">
+      <p>Contact us: info@valparairentals.com | +91 12345 67890</p>
+      <p>&copy; 2024 Valparai Rentals. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
