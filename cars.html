@@ -1,76 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Cars | Valparai Car Rentals</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Available Cars - Valparai Car Rentals</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset and body styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Navbar styles similar to homepage */
+  nav {
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Title */
+  h1 {
+    text-align: center;
+    margin: 40px 20px 20px 20px;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  }
+
+  /* Cars list styles */
+  .cars-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .car-item {
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .car-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  }
+
+  .car-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .car-item h2 {
+    margin: 15px;
+    font-size: 1.5em;
+    color: #333;
+  }
+
+  .car-item p {
+    margin: 0 15px 15px 15px;
+    font-size: 1em;
+    color: #555;
+  }
+
+  /* Responsive adjustments */
+  @media(max-width: 768px) {
+    .cars-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    .car-item {
+      width: 90%;
+    }
+  }
+</style>
 </head>
 <body>
 
+<!-- Navbar -->
 <nav>
-    <div class="logo">Valparai Car Rentals</div>
-
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cars.html">Cars</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="available-cars.html">Cars</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
-<section class="fleet">
+<h1>Available Cars</h1>
 
-    <h1>Available Cars</h1>
-
-    <div class="fleet-container">
-
-        <div class="car-card">
-            <h2>Honda Amaze</h2>
-            <p>5 Seater • Petrol • AC</p>
-            <a href="amaze.html">View Details</a>
-        </div>
-
-        <div class="car-card">
-            <h2>Toyota Etios</h2>
-            <p>5 Seater • Petrol • AC</p>
-            <a href="etios.html">View Details</a>
-        </div>
-
-        <div class="car-card">
-            <h2>Hyundai i10</h2>
-            <p>5 Seater • Petrol • AC</p>
-            <a href="i10.html">View Details</a>
-        </div>
-
-        <div class="car-card">
-            <h2>Tata Indica</h2>
-            <p>5 Seater • Diesel • AC</p>
-            <a href="indica.html">View Details</a>
-        </div>
-
-        <div class="car-card">
-            <h2>Toyota Innova</h2>
-            <p>7 Seater • Diesel • AC</p>
-            <a href="innova.html">View Details</a>
-        </div>
-
-        <div class="car-card">
-            <h2>Maruti Omni</h2>
-            <p>8 Seater • Petrol • AC</p>
-            <a href="omni.html">View Details</a>
-        </div>
-
-        <div class="car-card">
-            <h2>Mahindra Scorpio</h2>
-            <p>7 Seater • Diesel • AC</p>
-            <a href="scorpio.html">View Details</a>
-        </div>
-
-    </div>
-
-</section>
+<div class="cars-list">
+  <!-- Car 1 -->
+  <div class="car-item">
+    <a href="etios.html"><img src="images/etios.jpg" alt="Toyota Etios" /></a>
+    <h2>Toyota Etios</h2>
+    <p>Comfortable and fuel-efficient. Perfect for hill trips.</p>
+  </div>
+  <!-- Car 2 -->
+  <div class="car-item">
+    <a href="indica.html"><img src="images/indica.jpg" alt="Indica" /></a>
+    <h2>Indica</h2>
+    <p>Budget-friendly and reliable for city and hill travel.</p>
+  </div>
+  <!-- Add more cars as needed -->
+</div>
 
 </body>
 </html>
