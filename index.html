@@ -1,304 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Valparai Car Rentals</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-  <style>
-    /* Reset & Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Valparai Car Rentals</title>
+<!-- Google Fonts for a modern look -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset some default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    color: #333;
+    line-height: 1.6;
+  }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+  /* Navigation styling */
+  nav {
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
 
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-    }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    /* Header */
-    header {
-      background: linear-gradient(90deg, #4e54c8, #8f94fb);
-      padding: 20px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+  nav ul li {
+    margin: 0 20px;
+  }
 
-    header .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+  }
 
-    .logo {
-      font-size: 1.8em;
-      color: #fff;
-      font-weight: bold;
-    }
+  nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+  }
 
+  /* Header */
+  h1 {
+    text-align: center;
+    margin: 50px 20px 20px 20px;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  /* Call to action button */
+  .btn {
+    display: inline-block;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 14px 28px;
+    margin: 30px auto;
+    display: block;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background-color: #ff3b2e;
+    transform: translateY(-2px);
+  }
+
+  /* Responsive layout */
+  @media(max-width: 768px) {
     nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ffde59;
-    }
-
-    .btn-login {
-      background-color: #fff;
-      color: #4e54c8;
-      padding: 8px 14px;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .btn-login:hover {
-      background-color: #ffde59;
-      color: #333;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 900px;
-      padding: 20px;
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-
-    /* Search Box */
-    .search-box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 800px;
-      margin: 0 auto;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .form-group {
-      display: flex;
       flex-direction: column;
-      flex: 1 1 200px;
     }
-
-    label {
-      margin-bottom: 8px;
-      font-weight: 600;
+    h1 {
+      font-size: 2.2em;
     }
-
-    input[type="text"],
-    input[type="date"],
-    select {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1em;
-    }
-
-    .checkbox-group {
-      flex-direction: row;
-      align-items: center;
-    }
-
-    input[type="checkbox"] {
-      margin-right: 10px;
-    }
-
-    /* Buttons */
-    .btn-primary {
-      padding: 12px 25px;
-      background-color: #4e54c8;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s;
-      align-self: center;
-      margin-top: 10px;
-    }
-
-    .btn-primary:hover {
-      background-color: #3b42b3;
-    }
-
-    /* Content Section */
-    .content {
-      padding: 60px 20px;
-      background-color: #fff;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .content h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #4e54c8;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #222;
-      color: #ddd;
-      padding: 20px 0;
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    /* Responsive */
-    @media(max-width: 768px){
-      header .header-inner {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .hero h1 {
-        font-size: 2em;
-      }
-      .search-box {
-        padding: 20px;
-      }
-      form {
-        flex-direction: column;
-      }
-      .form-group {
-        width: 100%;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container header-inner">
-      <div class="logo">Valparai Rentals</div>
-      <nav>
-        <ul>
-          <li><a href="#">Become a Host</a></li>
-          <li><a href="#">Company Profile</a></li>
-          <li><a href="#">Get the App</a></li>
-          <li><a href="#" class="btn-login">Login</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Book Self-Drive Car Rentals in Valparai</h1>
-      <p>Discover scenic valleys and waterfalls with our reliable car rental services.</p>
-      <div class="search-box">
-        <form>
-          <div class="form-group">
-            <label for="city">City</label>
-            <select id="city" required>
-              <option value="Valparai">Valparai</option>
-              <option value="Coimbatore">Coimbatore</option>
-              <option value="Chennai">Chennai</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="location">Location</label>
-            <input type="text" id="location" placeholder="Enter specific location or landmark" />
-          </div>
-          <div class="form-group">
-            <label for="start-date">Trip Start</label>
-            <input type="date" id="start-date" />
-          </div>
-          <div class="form-group">
-            <label for="end-date">Trip End</label>
-            <input type="date" id="end-date" />
-          </div>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="delivery" />
-            <label for="delivery">Delivery & Pickup from anywhere</label>
-          </div>
-          <button type="submit" class="btn-primary">Search</button>
-        </form>
-      </div>
-    </div>
-  </section>
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="available-cars.html">Cars</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- Content -->
-  <section class="content">
-    <h2>Explore Valparai with Our Car Rentals</h2>
-    <p>Discover the scenic beauty of Valparai with our easy and affordable car rental services. Whether you're visiting tea estates, waterfalls, or wildlife sanctuaries, we've got the perfect vehicle for your trip.</p>
-  </section>
+<h1>Welcome to Valparai Car Rentals</h1>
+<p>Your trusted car rental service in Valparai. Explore our fleet of the best vehicles and enjoy a comfortable ride in the beautiful hill station.</p>
+<a href="available-cars.html" class="btn">View Available Cars</a>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>Contact us: info@valparairentals.com | +91 12345 67890</p>
-      <p>&copy; 2024 Valparai Rentals. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>
