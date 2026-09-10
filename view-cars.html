@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Available Cars</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .cars-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .car-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .car-card:hover {
+    transform: scale(1.05);
+  }
+
+  .car-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .car-details {
+    padding: 10px;
+  }
+
+  /* Modal styles for display on click */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>Available Cars</h1>
+<div class="cars-container">
+  <!-- Example car card -->
+  <div class="car-card" onclick="showModal('car1')">
+    <img src="images/image.png" alt="Car 1" class="car-image"/>
+    <div class="car-details">
+      <h3>Car Model 1</h3>
+      <p>Description or details here</p>
+    </div>
+  </div>
+  <div class="car-card" onclick="showModal('car2')">
+    <img src="images/image.png" alt="Car 2" class="car-image"/>
+    <div class="car-details">
+      <h3>Car Model 2</h3>
+      <p>Description or details here</p>
+    </div>
+  </div>
+  <!-- Add more cars similarly -->
+</div>
+
+<!-- Modal for showing car details -->
+<div id="carModal" class="modal">
+  <div class="modal-content" id="modalContent">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="" style="width:100%; max-height:300px; object-fit:contain;"/>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<script>
+  // Sample data for cars
+  const cars = {
+    car1: {
+      image: 'images/image.png',
+      title: 'Car Model 1',
+      desc: 'Description for Car Model 1'
+    },
+    car2: {
+      image: 'images/image.png',
+      title: 'Car Model 2',
+      desc: 'Description for Car Model 2'
+    },
+    // Add more cars here with unique IDs
+  };
+
+  function showModal(carId) {
+    const car = cars[carId];
+    document.getElementById('modalImage').src = car.image;
+    document.getElementById('modalTitle').innerText = car.title;
+    document.getElementById('modalDesc').innerText = car.desc;
+    document.getElementById('carModal').style.display = 'block';
+  }
+
+  function closeModal() {
+    document.getElementById('carModal').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
