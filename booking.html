@@ -1,58 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking | Valparai Car Rentals</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Car | Valparai Car Rentals</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<nav>
-    <div class="logo">Valparai Car Rentals</div>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cars.html">Cars</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<header class="navbar">
 
-<section class="booking">
+    <div class="logo">
+        VALPARAI <span>CAR RENTALS</span>
+    </div>
 
-    <div class="booking-box">
+    <nav>
 
-        <h1>Book Your Car</h1>
+        <a href="index.html">Home</a>
 
-        <form>
+        <a href="about.html">About</a>
 
-            <input type="text"
-                   placeholder="Enter Your Name"
-                   required>
+        <a href="booking.html">Booking</a>
 
-            <input type="tel"
-                   placeholder="Enter Phone Number"
-                   required>
+        <a href="cars.html">Cars</a>
 
-            <select required>
-                <option>Select Car</option>
-                <option>Honda Amaze</option>
-                <option>Toyota Etios</option>
-                <option>Hyundai i10</option>
-                <option>Tata Indica</option>
-                <option>Toyota Innova</option>
-                <option>Maruti Omni</option>
-                <option>Mahindra Scorpio</option>
-            </select>
+        <a href="contact.html">Contact</a>
 
-            <input type="date" required>
-            <input type="date" required>
+        <a href="customer_login.html"
+           class="login-btn">
+            Customer Login
+        </a>
 
-            <button type="submit">
+        <a href="mechanic_login.html">
+            Mechanic
+        </a>
+
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>Book Your Car</h1>
+
+    <p>
+        Reserve your vehicle and start your journey
+    </p>
+
+</section>
+
+
+<section class="booking-section">
+
+
+    <div class="booking-container">
+
+        <h1>
+            🚗 Complete Your Booking
+        </h1>
+
+
+        <form class="booking-form">
+
+
+            <div class="form-group">
+
+                <label>
+                    Your Name
+                </label>
+
+                <input type="text"
+                       placeholder="Enter your name"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input type="tel"
+                       placeholder="Enter phone number"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Select Car
+                </label>
+
+                <select required>
+
+                    <option value="">
+                        Select Car
+                    </option>
+
+                    <option>
+                        Toyota Etios
+                    </option>
+
+                    <option>
+                        Hyundai i10
+                    </option>
+
+                    <option>
+                        Tata Indica
+                    </option>
+
+                    <option>
+                        Toyota Innova
+                    </option>
+
+                    <option>
+                        Maruti Omni
+                    </option>
+
+                    <option>
+                        Mahindra Scorpio
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Pickup Date
+                </label>
+
+                <input type="date"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Return Date
+                </label>
+
+                <input type="date"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Pickup Location
+                </label>
+
+                <input type="text"
+                       placeholder="Enter pickup location">
+
+            </div>
+
+
+            <button type="submit"
+                    class="confirm-btn">
+
                 Confirm Booking
+
             </button>
+
 
         </form>
 
@@ -60,5 +190,19 @@
 
 </section>
 
+
+<footer>
+
+    <div class="copyright">
+
+        © 2026 Valparai Car Rentals.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
 </body>
+
 </html>
