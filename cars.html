@@ -1,95 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Available Cars</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            text-align: center;
-        }
-        /* Example styling for car list */
-        .car-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .car {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px 0;
-            transition: background-color 0.3s;
-        }
-        /* Make the entire car div clickable */
-        .car a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        a.btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #008CBA;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            margin: 20px;
-        }
-        a.btn:hover {
-            background-color: #007BB5;
-        }
-    </style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Available Cars | Valparai Car Rentals</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        VALPARAI <span>CAR RENTALS</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="booking.html">Booking</a>
+
+        <a href="cars.html">Cars</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="customer_login.html"
+           class="login-btn">
+            Customer Login
+        </a>
+
+        <a href="mechanic_login.html">
+            Mechanic
+        </a>
+
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
     <h1>Available Cars</h1>
-    <div class="car-list">
-        <!-- Etios -->
-        <div class="car">
-            <a href="etios.html">
-                <h2>Etios</h2>
-                <p>Details about Etios</p>
-            </a>
+
+    <p>
+        Choose the perfect car for your journey
+    </p>
+
+</section>
+
+
+<section class="available-cars">
+
+
+    <div class="available-grid">
+
+
+        <!-- ETIOS -->
+
+        <div class="available-card">
+
+            <img src="images/etios.jpg"
+                 alt="Toyota Etios">
+
+            <div class="available-info">
+
+                <h2>Toyota Etios</h2>
+
+                <p>
+                    Comfortable • 5 Seats • Diesel
+                </p>
+
+                <a href="etios.html"
+                   class="primary-btn">
+                    View Details
+                </a>
+
+            </div>
+
         </div>
-        <!-- i10 -->
-        <div class="car">
-            <a href="i10.html">
-                <h2>i10</h2>
-                <p>Details about i10</p>
-            </a>
+
+
+        <!-- I10 -->
+
+        <div class="available-card">
+
+            <img src="images/i10.jpg"
+                 alt="Hyundai i10">
+
+            <div class="available-info">
+
+                <h2>Hyundai i10</h2>
+
+                <p>
+                    Compact • 5 Seats • Petrol
+                </p>
+
+                <a href="i10.html"
+                   class="primary-btn">
+                    View Details
+                </a>
+
+            </div>
+
         </div>
-        <!-- Indica -->
-        <div class="car">
-            <a href="indica.html">
-                <h2>Indica</h2>
-                <p>Details about Indica</p>
-            </a>
+
+
+        <!-- INDICA -->
+
+        <div class="available-card">
+
+            <img src="images/indica.jpg"
+                 alt="Tata Indica">
+
+            <div class="available-info">
+
+                <h2>Tata Indica</h2>
+
+                <p>
+                    Economy • 5 Seats • Diesel
+                </p>
+
+                <a href="indica.html"
+                   class="primary-btn">
+                    View Details
+                </a>
+
+            </div>
+
         </div>
-        <!-- Innova -->
-        <div class="car">
-            <a href="innova.html">
-                <h2>Innova</h2>
-                <p>Details about Innova</p>
-            </a>
+
+
+        <!-- INNOVA -->
+
+        <div class="available-card">
+
+            <img src="images/innova.jpg"
+                 alt="Toyota Innova">
+
+            <div class="available-info">
+
+                <h2>Toyota Innova</h2>
+
+                <p>
+                    Family • 7 Seats • Diesel
+                </p>
+
+                <a href="innova.html"
+                   class="primary-btn">
+                    View Details
+                </a>
+
+            </div>
+
         </div>
-        <!-- Omni -->
-        <div class="car">
-            <a href="omni.html">
-                <h2>Omni</h2>
-                <p>Details about Omni</p>
-            </a>
+
+
+        <!-- OMNI -->
+
+        <div class="available-card">
+
+            <img src="images/omni.jpg"
+                 alt="Maruti Omni">
+
+            <div class="available-info">
+
+                <h2>Maruti Omni</h2>
+
+                <p>
+                    Family • 7 Seats • Petrol
+                </p>
+
+                <a href="omni.html"
+                   class="primary-btn">
+                    View Details
+                </a>
+
+            </div>
+
         </div>
-        <!-- Scorpio -->
-        <div class="car">
-            <a href="scorpio.html">
-                <h2>Scorpio</h2>
-                <p>Details about Scorpio</p>
-            </a>
+
+
+        <!-- SCORPIO -->
+
+        <div class="available-card">
+
+            <img src="images/scorpio.jpg"
+                 alt="Mahindra Scorpio">
+
+            <div class="available-info">
+
+                <h2>Mahindra Scorpio</h2>
+
+                <p>
+                    SUV • 7 Seats • Diesel
+                </p>
+
+                <a href="scorpio.html"
+                   class="primary-btn">
+                    View Details
+                </a>
+
+            </div>
+
         </div>
+
+
     </div>
-    <div style="text-align: center;">
-        <a href="index.html" class="btn">Back to Home</a>
+
+</section>
+
+
+<footer>
+
+    <div class="copyright">
+
+        © 2026 Valparai Car Rentals.
+        All Rights Reserved.
+
     </div>
+
+</footer>
+
+
 </body>
+
 </html>
